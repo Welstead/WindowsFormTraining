@@ -29,8 +29,13 @@ namespace Hurricanes
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBrowse = new System.Windows.Forms.Button();
+            this.dataGridView = new System.Windows.Forms.DataGridView();
+            this.cityModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,15 +57,37 @@ namespace Hurricanes
             this.btnBrowse.UseVisualStyleBackColor = true;
             this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
+            // dataGridView
+            // 
+            this.dataGridView.AllowUserToAddRows = false;
+            this.dataGridView.AllowUserToDeleteRows = false;
+            this.dataGridView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView.Location = new System.Drawing.Point(13, 65);
+            this.dataGridView.Name = "dataGridView";
+            this.dataGridView.ReadOnly = true;
+            this.dataGridView.RowTemplate.Height = 25;
+            this.dataGridView.Size = new System.Drawing.Size(1013, 471);
+            this.dataGridView.TabIndex = 2;
+            // 
+            // cityModelBindingSource
+            // 
+            this.cityModelBindingSource.DataSource = typeof(Hurricanes.CityModel);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 548);
+            this.ClientSize = new System.Drawing.Size(1038, 548);
+            this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.label1);
             this.Name = "frmMain";
             this.Text = "Cities";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cityModelBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,6 +97,8 @@ namespace Hurricanes
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.DataGridView dataGridView;
+        private System.Windows.Forms.BindingSource cityModelBindingSource;
     }
 }
 

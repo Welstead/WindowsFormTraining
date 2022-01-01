@@ -19,25 +19,21 @@ namespace NumberGuessingGame
         public frmMain()
         {
             InitializeComponent();
-
+            label5.Text += $"(1 - {maxNumber})";
         }
 
         private void btnGenerate_Click(object sender, EventArgs e)
         {
+            lblRandomNumber.Text = "???";
             _gameLogic.GameSetup(lives,maxNumber+1);
-            label4.Hide();
-            lblRandomNumber.Hide();
-            
+            label4.Show();
+            lblRandomNumber.Show();
             btnSubmitGuess.Enabled = true;
-            
             txtRngNum.Enabled = true;
-            
-
             lblFeedback.Text = "";
-            lblRandomNumber.Text = _gameLogic.currentAnswer.ToString();
+            //lblRandomNumber.Text = _gameLogic.currentAnswer.ToString();
             lblLivesRemaining.Text = lives.ToString();
             lblHint.Text = _gameLogic.GiveRandomHint();
-            
         }
 
         private void btnSubmitGuess_Click(object sender, EventArgs e)
@@ -56,11 +52,11 @@ namespace NumberGuessingGame
             lblLivesRemaining.Text = _gameLogic.Lives.ToString();
             if(_gameLogic.Lives < 1)
             {
-                label4.Show();
-                lblRandomNumber.Show();
+                
                 btnSubmitGuess.Enabled = false;
                 txtRngNum.Enabled=false;
                 lblFeedback.Text += "\n" + "Game Over";
+                lblRandomNumber.Text = _gameLogic.currentAnswer.ToString();
             }
         }
     }

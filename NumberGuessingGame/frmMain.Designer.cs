@@ -41,20 +41,21 @@ namespace NumberGuessingGame
             this.btnSubmitGuess = new System.Windows.Forms.Button();
             this.lblFeedback = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.grpboxHint.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtRngNum
             // 
             this.txtRngNum.Enabled = false;
-            this.txtRngNum.Location = new System.Drawing.Point(126, 101);
+            this.txtRngNum.Location = new System.Drawing.Point(126, 116);
             this.txtRngNum.Name = "txtRngNum";
             this.txtRngNum.Size = new System.Drawing.Size(100, 23);
             this.txtRngNum.TabIndex = 0;
             // 
             // btnGenerate
             // 
-            this.btnGenerate.Location = new System.Drawing.Point(187, 17);
+            this.btnGenerate.Location = new System.Drawing.Point(192, 17);
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(75, 23);
             this.btnGenerate.TabIndex = 1;
@@ -96,7 +97,7 @@ namespace NumberGuessingGame
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 104);
+            this.label3.Location = new System.Drawing.Point(23, 119);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 15);
             this.label3.TabIndex = 5;
@@ -105,7 +106,7 @@ namespace NumberGuessingGame
             // grpboxHint
             // 
             this.grpboxHint.Controls.Add(this.lblHint);
-            this.grpboxHint.Location = new System.Drawing.Point(23, 46);
+            this.grpboxHint.Location = new System.Drawing.Point(23, 61);
             this.grpboxHint.Name = "grpboxHint";
             this.grpboxHint.Size = new System.Drawing.Size(370, 49);
             this.grpboxHint.TabIndex = 6;
@@ -135,7 +136,7 @@ namespace NumberGuessingGame
             // btnSubmitGuess
             // 
             this.btnSubmitGuess.Enabled = false;
-            this.btnSubmitGuess.Location = new System.Drawing.Point(242, 101);
+            this.btnSubmitGuess.Location = new System.Drawing.Point(242, 116);
             this.btnSubmitGuess.Name = "btnSubmitGuess";
             this.btnSubmitGuess.Size = new System.Drawing.Size(75, 23);
             this.btnSubmitGuess.TabIndex = 8;
@@ -162,12 +163,21 @@ namespace NumberGuessingGame
             this.label4.Text = "Answer";
             this.label4.Visible = false;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(77, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 15);
+            this.label5.TabIndex = 11;
+            // 
             // frmMain
             // 
             this.AcceptButton = this.btnSubmitGuess;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 336);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblFeedback);
             this.Controls.Add(this.btnSubmitGuess);
@@ -203,6 +213,7 @@ namespace NumberGuessingGame
         private System.Windows.Forms.Button btnSubmitGuess;
         private System.Windows.Forms.Label lblFeedback;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
