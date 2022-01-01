@@ -29,8 +29,16 @@ namespace Hurricanes
         {
             var ofd = new OpenFileDialog();
             ofd.ShowDialog();
-            LoadFile(ofd);
-            PopulateDataGridView();
+            try
+            {
+                LoadFile(ofd);
+                PopulateDataGridView();
+            }
+            catch
+            {
+                MessageBox.Show("Please select a valid file","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
 
         private void LoadFile(OpenFileDialog file)
