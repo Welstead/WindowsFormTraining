@@ -38,6 +38,7 @@ namespace Hurricanes
             {
                 MessageBox.Show("Please select a valid file","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            //test change
             
         }
 
@@ -53,15 +54,15 @@ namespace Hurricanes
                 string row = csvLines[i];
                 string[] data = row.Split(',');
                 DataList.Add(new CityModel()
-                {
+                { 
                     LatD = Convert.ToInt32(data[0]),
                     LatM = Convert.ToInt32(data[1]),
                     LatS = Convert.ToInt32(data[2]),
-                    NS = (data[3]),
+                    NS = data[3],
                     LonD = Convert.ToInt32(data[4]),
                     LonM = Convert.ToInt32(data[5]),
                     LonS = Convert.ToInt32(data[6]),
-                    EW = (data[7]),
+                    EW = data[7],
                     CityName = data[8],
                     State = data[9]
                 });
